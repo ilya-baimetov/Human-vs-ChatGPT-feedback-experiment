@@ -1,0 +1,255 @@
+========================== Welcome to the Rat Race ==========================
+
+
+----------------------  Round 1 ---------------------
+
+Name    Position        Point
+Alice   10              10
+Bob     7               15
+
+----------------------  Round 2 ---------------------
+
+Name    Position        Point
+Alice   17              10
+Bob     11              15
+
+----------------------  Round 3 ---------------------
+
+Name    Position        Point
+Alice   26              10
+Bob     14              15
+
+----------------------  Round 4 ---------------------
+
+Name    Position        Point
+Alice   30              5
+Bob     23              15
+
+----------------------  Round 5 ---------------------
+
+Name    Position        Point
+Alice   40              0
+Bob     30              10
+
+----------------------  Round 6 ---------------------
+
+Name    Position        Point
+Alice   45              5
+Bob     38              10
+
+----------------------  Round 7 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     48              10
+
+----------------------  Round 8 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+
+=================== Game Ended ====================
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+
+----------------------  Round 1 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    5               15
+
+----------------------  Round 2 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    15              15
+
+----------------------  Round 3 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    22              15
+
+----------------------  Round 4 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    28              15
+
+----------------------  Round 5 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    33              15
+
+----------------------  Round 6 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    38              15
+
+----------------------  Round 7 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    49              15
+
+----------------------  Round 8 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+
+=================== Game Ended ====================
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+
+----------------------  Round 1 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    6               15
+
+----------------------  Round 2 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    15              15
+
+----------------------  Round 3 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    27              15
+
+----------------------  Round 4 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    33              15
+
+----------------------  Round 5 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    43              15
+
+----------------------  Round 6 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+
+=================== Game Ended ====================
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+
+----------------------  Round 1 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   7               15
+Peter   9               15
+
+----------------------  Round 2 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   12              15
+Peter   16              15
+
+----------------------  Round 3 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   16              15
+Peter   22              15
+
+----------------------  Round 4 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   27              15
+Peter   34              15
+
+----------------------  Round 5 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   36              15
+Peter   38              15
+
+----------------------  Round 6 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   43              15
+Peter   47              15
+
+----------------------  Round 7 ---------------------
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   50              10
+Peter   58              15
+
+=================== Game Ended ====================
+
+Name    Position        Point
+Alice   56              5
+Bob     54              10
+Rose    53              15
+Alex    50              10
+Jason   50              10
+Peter   58              15
