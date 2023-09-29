@@ -1,0 +1,16 @@
+Rat Race case study
+
+Comments on Li’s solution (by Marco Piccioni)
+•	Class decomposition: APPLICATION, BOARD_GAME, DICE, PLAYER. Singular is preferable in class names, because they each represent a template of a series of objects that share the same features. Therefore, it is DIE rather than DICE.
+•	Assigning responsibilities to classes: APPLICATION and BOARD_GAME have partially overlapping responsibilities. If we want to keep responsibilities separate and minimize communication between classes (high cohesion and low coupling) then it’s more appropriate to have APPLICATION used just to bootstrap the app and BOARD_GAME to run the game.
+•	Use of inheritance: class DICE inherits from RANDOM. The relationship IS-A is not satisfied: a die is not a random generator. This should be already enough to discard this design choice. A more flexible choice would be to have an attribute of type RANDOM, as in “a die has a random generator”). Anyway, it’s one or the other. The solution has both inheritance and client relationship, so this is a clear design issue.
+•	Use of constants: values like 15 (initial player’s hit points) and 50 (number of board squares) in class PLAYER should be saved in a constant.
+•	Tests: in the test provided Alice’ hit points went down to zero in round 5 but she continued to play.
+
+Comments on Greg’s solution (by Marco Piccioni)
+•	Modularization: there is only one file (main.py) containing all the classes.
+•	Class decomposition: game_state, player. game_state as a name implies no behavior (state only). Better boardgame or rat_race.
+•	Assigning responsibilities to classes: why class player has 2 constructors?
+•	Use of inheritance: OK (inheritance is not necessary here).
+•	Use of constants: values like 15 (initial player’s hit points) and 1 (starting square) in class player and 50 in class game_state should be saved in a constant.
+•	Tests: OK
