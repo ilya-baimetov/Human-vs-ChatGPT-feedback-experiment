@@ -11,7 +11,8 @@ This should be already enough to discard this design choice. A more flexible cho
 “a die has a random generator”). Anyway, it’s inheritance or client relationship. The solution has both inheritance and client relationship,
 so this is a clear design issue.
 •	Use of constants: values like 15 (initial player’s hit points) and 50 (number of board squares) in class PLAYER should be saved in a constant.
-•	Tests: in the test provided Alice’ hit points went down to zero in round 5 but she continued to play.
+•	Tests: in the test provided Alice’ hit points went down to zero in round 5 but she continued to play. . 
+There could be a test on the frequence of double dice rolls.
 
 Comments on Greg’s solution (by Marco Piccioni)
 •	Modularization: there is only one file (main.py) containing all the classes.
@@ -19,7 +20,7 @@ Comments on Greg’s solution (by Marco Piccioni)
 •	Assigning responsibilities to classes: why class player has 2 constructors?
 •	Use of inheritance: OK (inheritance is not necessary here).
 •	Use of constants: values like 15 (initial player’s hit points) and 1 (starting square) in class player and 50 in class game_state should be saved in a constant.
-•	Tests: OK
+•	Tests: OK. 
 
 Comments on Ilgiz's solution (by Marco Piccioni)
 •	Modularization: there is only one file (Main.java) containing all the classes. All classes except Main are nested and static. J. Bloch in Effective Java suggests
@@ -32,4 +33,16 @@ Also having more classes in a file is discouraged, as it does not bring any bene
 •	Implementation of random numbers: by creating 2 Die objects at almost the same time you create 2 separate but very similar sequences of pseudorandom numbers.
 The possible issue (needs to be tested) is that when you invoke next() you get most of the time the same numbers.
 It's safer to use only one Die object, that is on sequence, and invoke roll() multiple times on this one object.
-•	Tests: OK
+•	Tests: OK. There could be a test on the frequence of double dice rolls.
+
+Comments on Viktoryia’s solution (by Marco Piccioni)
+•	Class decomposition: main, game, dice, board, player: OK
+Singular is preferable in class names, because they each represent a template of a series of objects that share the same features. 
+Therefore, it should be die rather than dice.
+•	Assigning responsibilities to classes: OK
+Implementation of random numbers: by creating 2 Die objects at almost the same time you create 2 separate but very similar sequences of pseudorandom numbers.
+The possible issue (needs to be tested) is that when you invoke next() you get most of the time the same numbers.
+It's safer to use only one Die object, that is on sequence, and invoke roll() multiple times on this one object.
+•	Use of constants: "magic numbers" values like 15 (initial player’s hit points) and 50 (number of board squares) should be saved in a constant.
+•	Use of inheritance: OK (inheritance is not necessary here).
+•	Tests: OK. There could be a test on the frequence of double dice rolls. 
