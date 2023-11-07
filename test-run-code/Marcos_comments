@@ -1,18 +1,47 @@
 Rat Race case study
 
-Comments on Li’s solution (by Marco Piccioni)
+See separate excel sheet for numeric grades summary.
+
+Comments on #1 - Alessandro's solution (by Marco Piccioni)
+•	Class decomposition: APPLICATION, BOARD, GAME, DIE, PLAYER, SQUARE: OK.
+•	Use of inheritance: OK (inheritance is not necessary here).
+•	Use of constants: OK 
+•	Implementation of random numbers: by creating 2 Die objects at almost the same time you create 2 separate but very similar sequences of pseudorandom numbers.
+The possible issue (needs to be tested) is that when you invoke next() you get most of the time the same numbers.
+It's safer to use only one Die object, that is on sequence, and invoke roll() multiple times on this one object.
+•	Tests: OK. There could be a test on the frequence of double dice rolls (-2).
+SOLID principles: Single responsibility: 2; Open-closed: 2; Liskov substitution: 2; Interface segregation and dependency inversion: 4. 
+
+
+Comments on #4 - Ilgiz's solution (by Marco Piccioni)
+•	Modularization: there is only one file (Main.java) containing all the classes. All classes except Main are nested and static. J. Bloch in Effective Java suggests
+that nested classes should exist only to serve their enclosing class. If they are useful in some other context, they should be top level classes. 
+A static class can be used as a helper class, but this is not the case. 
+Also having more classes in a file is discouraged, as it does not bring any benefits but just potential risks. (Design: -2; Maintenability: -2)
+•	Class decomposition: Game, Player. Die: OK
+•	Use of inheritance: OK (inheritance is not necessary here).
+•	Use of constants: OK 
+•	Implementation of random numbers: by creating 2 Die objects at almost the same time you create 2 separate but very similar sequences of pseudorandom numbers.
+The possible issue (needs to be tested) is that when you invoke next() you get most of the time the same numbers.
+It's safer to use only one Die object, that is on sequence, and invoke roll() multiple times on this one object.
+•	Tests: OK. There could be a test on the frequence of double dice rolls (-2).
+SOLID principles: Single responsibility: 2 (see above); Open-closed: 0 (see above); Liskov substitution: 2; Interface segregation and dependency inversion: 4. 
+
+
+Comments on #6 - Li’s solution (by Marco Piccioni)
 •	Class decomposition: APPLICATION, BOARD_GAME, DICE, PLAYER. Singular is preferable in class names, 
-because they each represent a template of a series of objects that share the same features. Therefore, it should be DIE rather than DICE.
+because they each represent a template of a series of objects that share the same features. Therefore, it should be DIE rather than DICE (-1).
 •	Assigning responsibilities to classes: APPLICATION and BOARD_GAME have partially overlapping responsibilities. 
 If we want to keep responsibilities separate and minimize communication between classes (high cohesion and low coupling) 
 then it’s more appropriate to have APPLICATION used just to bootstrap the app and BOARD_GAME used to run the game.
-•	Use of inheritance: class DICE inherits from RANDOM. The relationship IS-A is not satisfied: a die is not a random generator. 
+•	Use of inheritance: class DICE inherits from RANDOM. The relationship IS-A is not satisfied: a die is not a random generator (-2). 
 This should be already enough to discard this design choice. A more flexible choice would be to have an attribute of type RANDOM, as in 
 “a die has a random generator”). Anyway, it’s inheritance or client relationship. The solution has both inheritance and client relationship,
-so this is a clear design issue.
+so this is a clear design issue. Maintenability is therefore affected (-2).
 •	Use of constants: values like 15 (initial player’s hit points) and 50 (number of board squares) in class PLAYER should be saved in a constant.
-•	Tests: in the test provided Alice’ hit points went down to zero in round 5 but she continued to play. . 
-There could be a test on the frequence of double dice rolls.
+•	Tests: in the test provided Alice’ hit points went down to zero in round 5 but she continued to play (Error handling: -2).
+There could be a test on the frequence of double dice rolls (testing: -2).
+SOLID principles: Single responsibility: 1 (see above); Open-closed and Liskov substitution: 0 (see above); Interface segregation and dependency inversion: 4. 
 
 Comments on Greg’s solution (by Marco Piccioni)
 •	Modularization: there is only one file (main.py) containing all the classes.
@@ -21,19 +50,6 @@ Comments on Greg’s solution (by Marco Piccioni)
 •	Use of inheritance: OK (inheritance is not necessary here).
 •	Use of constants: values like 15 (initial player’s hit points) and 1 (starting square) in class player and 50 in class game_state should be saved in a constant.
 •	Tests: OK. 
-
-Comments on Ilgiz's solution (by Marco Piccioni)
-•	Modularization: there is only one file (Main.java) containing all the classes. All classes except Main are nested and static. J. Bloch in Effective Java suggests
-that nested classes should exist only to serve their enclosing class. If they are useful in some other context, they should be top level classes. 
-A static class can be used as a helper class, but this is not the case. 
-Also having more classes in a file is discouraged, as it does not bring any benefits but just potential risks.
-•	Class decomposition: Game, Player. Die: OK
-•	Use of inheritance: OK (inheritance is not necessary here).
-•	Use of constants: OK 
-•	Implementation of random numbers: by creating 2 Die objects at almost the same time you create 2 separate but very similar sequences of pseudorandom numbers.
-The possible issue (needs to be tested) is that when you invoke next() you get most of the time the same numbers.
-It's safer to use only one Die object, that is on sequence, and invoke roll() multiple times on this one object.
-•	Tests: OK. There could be a test on the frequence of double dice rolls.
 
 Comments on Viktoryia’s solution (by Marco Piccioni)
 •	Class decomposition: main, game, dice, board, player: OK
